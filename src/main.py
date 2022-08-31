@@ -16,7 +16,7 @@ def main():
         from videotester import VideoTester
         model = model.Model(args, checkpoint)
         t = VideoTester(args, model, checkpoint)
-        t.test()
+        #t.test()
     else:
         if checkpoint.ok:
             loader = data.Data(args)
@@ -25,7 +25,7 @@ def main():
             t = Trainer(args, loader, _model, _loss, checkpoint)
             while not t.terminate():
                 t.train()
-                t.test()
+                #t.test()
 
             checkpoint.done()
 
